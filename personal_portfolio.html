@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Camilo's Portfolio</title>
+    </head>
+    <body>
+        <main id="main">
+            <div class="outer" id="welcome-section">
+                <div id="name-and-headshot" class="entry">
+                    <div id="headshot" class="left media">
+                        <img id="headshot" src="portfolio-media/Profile Picture Square.png" />
+                    </div>
+                    <div id="name-and-headline">
+                        <h1 id="name">Camilo Garrido</h1>
+                        <h4 id="headline">Mechanical Engineering | Robotics</h4>
+                    </div>
+                </div>
+                <hr/>
+                <div id="resume-and-about-me" class="entry">
+                    <div id="resume" class="clickable media">
+                        <a id="resume" href="portfolio-media/Transmission Engineering Notebook .pdf">
+                            <img id="resume" src="https://cdn.prod.website-files.com/62f3a8c764f6eb23f4252b13/65ae51f0ddc0ea67f480d3d7_630c5094b066bf1439c1ae99_61ceab1003a8ee0a41ab5f54_6142e1ab5a4e992313a9364a_Second-Year-Student-1.webp"/>
+                        </a>
+                        <p id="resume">View my Resume</p>
+                    </div>
+                    <div id="about-me">
+                        <h3 id="about-me">About Me</h3>
+                        <p>Hi there! Welcome to my website! My name is Camilo, 
+                            I was born in Havana, Cuba, but raised in Miami, 
+                            Florida, and now I'm entering my third year of 
+                            studying mechanical engineering with a focus on 
+                            robotics as an undergraduate at Caltech.</p>
+                        <p>Ever since I was little, I've kept myself busy 
+                            exploring new passions and learning through projects
+                             and hobbies, but I never had a place to share and
+                              reflect on these creations... until now! I 
+                              have a big backlog of projects that I want to put 
+                              on here, as well as some upcoming projects that 
+                              I'm very excited to share!  Occasionally I'll also
+                               spinkle in some other fun highlights of my 
+                               activities.</p>
+                        <p>Please take a look around :)</p>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="outer">
+                <h2 id="projects-title">Projects</h2>
+                <div id="ME-14-Transmission-Project" class="project-tile">
+                    <h3>Transmission Project — ME 14 (Design and Fabrication)</h3>
+                    <div class="entry full">
+                        <p>I had the incredible opportunity to work on a
+                            two-stage transmission project with an amazing
+                            team as part of Caltech's Design and Fabrication 
+                            class, which is a core requirement and, in many 
+                            ways, a rite of passage for Mechanical Engineering 
+                            students here. We were given a tight timeline and 
+                            budget of around two weeks and $200 to design, 
+                            build, and test our transmission. Transmissions 
+                            were scored based on their maximum speed (in rpm) 
+                            divided by the time taken for it to reach 250 rpm,
+                            and our team won!
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <div id="transmission-notebook" class="left media">
+                            <img id="transmission-notebook-img" src="portfolio-media/Transmission Engineering Notebook Cover.png" />
+                            <embed src="portfolio-media/Transmission Engineering Notebook .pdf" 
+                                type="application/pdf">
+                        </div>
+                        <div class="right text">
+                            <p>This project was such an exceptional learning experience!
+                                It exercised everything from engineering design and 
+                                communication, team building and coordination, 
+                                performance prediction modeling, timeline
+                                management, machining (a <em>lot</em> of it), 
+                                documentation, component/product specification, and 
+                                so much more. I highly encourage you to check out my 
+                                Engineering Notebook (just hover over it with your mouse
+                                to get started). It goes into way more detail than
+                                I could ever cover on here! I can only hope future
+                                class projects will be as fun and rewarding as this one.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <video src="portfolio-media/Transmission Testing.mp4" controls>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="right">
+                            <p>Here's a test run I recorded that shows our transmission 
+                                running. The  test rig it is mounted on has a sensor to 
+                                measure the output rpm, but we weren't allowed to
+                                use it before the competition. However, we were still
+                                able to estimate our score by recording tests like
+                                this one in slo-mo, and then counting the number of 
+                                revolutions of the bike wheel during a 5-10 second
+                                interval (real-time) to then extrapolate its rpm.
+                                These tests helped us realize that we needed to improve
+                                our second stage in order to win, and are just one
+                                of the ways that our team thought outside of the box!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="entry full media">
+                        <img src="portfolio-media/Celebration With Professor Mello.jpg" />
+                    </div>
+                    <div class="full">
+                        <p>Our team's celebratory picture with the class instructor,
+                            Professor Mello, after the class contest.</p>
+                    </div>
+                </div>
+                <div id="ME-75-Rappeling Robots-Project" class="project-tile">
+                    <h3>Rappeling Robot — ME 75 (Multidisciplinary Systems Engineering)</h3>
+                    <div class="entry full">
+                        <p>It's not often that a student-led class has the budget
+                            to allow students to buy state-of-the-art hardware to
+                            work on projects of their choosing. That's why this 
+                            class was such a unique learning opportunity. I primarily
+                            took this chance to learn more about electronics and
+                            how to incorporate power considerations into engineering
+                            designs. My team's project idea was to make tethered 
+                            robots that could cooperate to descend and ascend craters 
+                            for exploration missions. I integrated our robot's 
+                            computer, camera, motor, motor controller, and steering 
+                            servo. I made the system hot-swappable so that it 
+                            could be powered by our LiPo Batteries, or tested on
+                            a stand while connected to wall power. Along the way,
+                            I picked up useful skills such as soldering and a bit
+                            of ROS. Here's an electrical diagram with the key 
+                            components of our robot so far:
+                        </p>
+                    </div>
+                    <div class="entry full media">
+                        <img src="portfolio-media/ME 75 Electrical Schematic.png" />
+                    </div>
+                    <div class="entry">
+                        <div id="" class="left media">
+                            <video src="portfolio-media/Rappeling Robot Driving Day 1.mp4" controls>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="right">
+                            <p>We used a <a target="blank" href="https://traxxas.com/products/landing/maxx/">
+                                Traxxas Max</a> as the base of our chassis, but 
+                                replaced the electronics to better suit our needs.
+                                The Traxxas Maxx motor only had two pole-pairs so
+                                it was difficult to control precisely. We also 
+                                custom-made the larger wheels to prevent the robot
+                                from bottoming-out, and added treads to reduce
+                                slippage on granular terrain. Here's a video of 
+                                the our first integrated hardware test (note that
+                                this was before steering had been implemented). 
+                                It's astonishing how much work it can take just 
+                                to get a robot to this stage when working with
+                                novel hardware
+                            </p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <video src="portfolio-media/Rappeling Robot Steering.mp4" controls>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="right">
+                            <p>Getting the robot steering was another big challenge.
+                                This was the first time I ever worked with ROS. We
+                                used it to communicate between a Logitech remote 
+                                controller, our Jetson Orin Nano, the Traxxas' 
+                                steering servo, and the microcontroller that controlled
+                                the servo. After dozens of hours of troubleshooting
+                                the steering system, and switching our microcontroller
+                                from a faulty RP2040 to the Teensy 4.0, my teammate 
+                                and I finally got it to work! This is was one of
+                                the most satisfying and relieving moments of my 
+                                academic career.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <video src="portfolio-media/Smooth Robot Movements.mp4" controls>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="right">
+                            <p>Despite all of the work my team and I have put in, this
+                                project is still a long way from completion. The tether-management system is practically 
+                                in its infancy. I worked on a MatLab script a while 
+                                back to actively calculate the lengths of the tether 
+                                segments between robots and the anchor winch. However, 
+                                much of the hardware needed to start implementing 
+                                this has yet to be developed. I hope to be able to
+                                continue this project throughout the year!
+                                <!--Which is why I'm so
+                                grateful to have been offered the opportunity to continue this work
+                                as a research project!-->
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="ME-8-Ball-Tracking-Camera" class="project-tile">
+                    <h3>Ball-Tracking Camera  — ME 8 (Intro to Robotics)</h3>
+                    <div class="entry full">
+                        <p> Through Caltech's introductory course on robotics, I
+                            learned about the fundamentals of smooth motor control
+                            and computer vision to make a gimbal robot that fluidly
+                            tracks the position of an object (a tennis ball in 
+                            this particular case). Sadly I didn't save videos of
+                            the final robot actively tracking the ball, but below
+                            I have demonstrations of these functions independently
+                            — the gimbal moving smoothly and the camera vision
+                            identifying a tennis ball.
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <div  class="left media">
+                            <video src="portfolio-media/Smooth Motor Control.mp4" controls>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div id="ball-tracking" class="right media">
+                            <img  src="portfolio-media/Tennis Ball Tracking.png" />
+                        </div>
+                    </div>
+                </div>
+                <div id="High-School-Robotics" class="project-tile">
+                    <h3>High School Robotics</h3>
+                    <div class="entry full">
+                        <p>I cannot overstate the role that my participation in 
+                            the Mecha Makos Robotics Club at my high school played
+                            in enabling me to explore my passion for mechanical 
+                            engineering. I would scour through robotics forums
+                            and youtube videos to learn how to improve our robots.
+                            I taught myself how to use 3D modeling software so
+                            that I could work on designs from home and quickly
+                            create drawings and renders for our engineering notebook.
+                            Then, my desire to improve our robots' autonomous 
+                            programs for competitions motivated me to also learn
+                            how to code. Over the course of my four years, I easily
+                            put in a few-thousand hours into this club. Each robot
+                            was a massive project on its own. Collectively,
+                            they cemented my passion for robotics and catapulted
+                            my engineering skills to new heights.
+                        </p>
+                    </div>
+                    <div class="entry full media">
+                        <video src="portfolio-media/Successful Auton 2020.mp4" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="entry full">
+                        <p>This video radiates the excitement we felt as a team 
+                            when our autonomous program worked against all odds!
+                            That's the power of robotics.
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <div  class="left media">
+                            <img src="portfolio-media/2021 Robot Early Prototype.png" />
+                        </div>
+                        <div class="right">
+                            <p>
+                                During the pandemic, I poured hundreds of hours 
+                                into designing our robot in Fusion360. This is 
+                                one of that robot's earliest iterations. Looking
+                                back, it was such a great use of all my extra time at home!
+                                I learned to make subsequent iterations progressively
+                                simpler, following the KISS design principle so 
+                                that we would be able to quickly build this robot
+                                when we returned to in-person schooling. 3D modelling
+                                broke down the previous years' limitation of only
+                                being able to work on these robots for 2 hours a
+                                week during our regular club meetings. This skills
+                                helped me elevate our robots to new competitive heights!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <div class="opaque">
+                                <img src="portfolio-media/2021 Robot - Near Final Version.png" />
+                            </div>
+                            <p>I loved making cool renders of the designs! They 
+                                really brought my ideas to life and helped me
+                                communicate them with others in a way that 
+                                hand-drawn sketches (no matter how detailed they are) just
+                                can't.
+                            </p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="opaque">
+                                <img src="portfolio-media/2021 Robot - Near Final Version Angle 2.png" />
+                            </div>
+                            <p>I could even incorporate the game elements that 
+                                would be on the field during competitions far 
+                                before we were able to build our own field 
+                                at school! This was great for getting a sense of
+                                the scale of these elements in relation to the robot.
+                            </p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="opaque">
+                                <img src="portfolio-media/619A Robot Final Render.png" />
+                            </div>
+                            <p>This one was our final design that year! You'll
+                                see in the videos below that the hood would extend
+                                up to direct balls into the goal zones, but it 
+                                started matches in this lowered position to
+                                meet size requirements.
+                            </p>
+                        </div>   
+                    </div>
+                    <div class="entry full media">
+                        <video src="portfolio-media/Auton Animated Run.mp4" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="entry full">
+                        <p>I even created animations of plans for our autonomous
+                            programs!
+                        </p>
+                    </div>                                             
+                    <div class="entry">
+                        <div  class="left media">
+                            <img src="portfolio-media/Building 2021 Vex Robot.jpg" />
+                        </div>
+                        <div class="right">
+                            <p>Just imagine how happy I was when we went back to
+                                school in-person andI was finally able to build
+                                the robot that I'd spent months designing. It
+                                felt so surreal! Since the robot was fully CADed,
+                                I was able to give each team member a component 
+                                to assemble. As a result, we built the robot and
+                                started testing it within a matter of days!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="entry full media">
+                        <video src="portfolio-media/IMG_4162.mp4" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="entry full">
+                        <p>This was the first year that I took a lead designing
+                            role on my team, as well as a central role programming.
+                            Despite all of the hurdles that the pandemic through
+                            in the way, our team made one of the best-performing
+                            and most reliable robots in the club's history. Taking
+                            all of the skills I had developed throughout the year,
+                            I immediately got to work on building an even better,
+                            more ambitious robot for my senior year...
+                        </p>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <div class="green">
+                                <a target="_blank" src="https://gmail806273.autodesk360.com/g/projects/20210404399694276/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uUF91STQxTk1SQ21iSk9fbm5Dd3FGdw/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOlRkM3BzQVdpUVhLVXZrNzZsYXJmNmc/viewer">
+                                    <img src="portfolio-media/2022 VEX Robot CAD Angle 2.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <div  class="grid-item">
+                            <div class="green">
+                                <a target="_blank" href="https://gmail806273.autodesk360.com/g/projects/20210404399694276/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uUF91STQxTk1SQ21iSk9fbm5Dd3FGdw/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOlRkM3BzQVdpUVhLVXZrNzZsYXJmNmc/viewer">
+                                    <img src="portfolio-media/2022_VEX_Robot_CAD_Home_View_New.png" />
+                                </a>
+                            </div>
+                            <p><b>Better ... Faster ... Stronger</b></p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="green">
+                                <a target="_blank" href="https://gmail806273.autodesk360.com/g/projects/20210404399694276/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uUF91STQxTk1SQ21iSk9fbm5Dd3FGdw/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOlRkM3BzQVdpUVhLVXZrNzZsYXJmNmc/viewer">
+                                    <img src="portfolio-media/2022 VEX Robot CAD Angle 3.png"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div  class="left media">
+                            <img src="portfolio-media/2022 Vex Robot.jpg" />
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div  class="left media green">
+                            <img src="portfolio-media/2022 VEX Robot CAD Angle 1 (New).png"/>
+                        </div>
+                    </div>
+                    <div class="entry full">
+                        <p>We stayed so true to the design this year that the
+                            resemblance between the final robot and the early CAD
+                            renderings is still uncanny to me. I also had more
+                            experience with coding so I helped make our autonomous
+                            programs better than ever — incorporating more PID
+                            control loops to achieve greater reliability. The 
+                            results speak for themselves. We placed first in the 
+                            bracket stage of a competition and qualified for the
+                            national and world championships with this robot — 
+                            the first of our school club's teams to do so in years.
+                            Just look at this thing go:
+                        </p>
+                    </div>
+                    <div class="entry full media">
+                        <video src="portfolio-media/2022 Robotics Competition.MP4" controls>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div id="Website" class="project-tile">
+                    <h3>This Website</h3>
+                    <div class="entry full">
+                        <p>Building this website while learning HTML and CSS has
+                            been an exciting journey, full of a myriad of fun 
+                            challenges. There are still so many features I 
+                            envision adding to make it more interactive, details
+                            to enhance about my projects, and design aspects to 
+                            refine. Yet, with other exciting projects on the 
+                            horizon and a new school year approaching, I feel it's
+                            the perfect time to pause and reflect on how far I've 
+                            come. I’m committed to periodically updating and 
+                            maintaining this site during breaks. Creating a space
+                            like this to share and reflect on my work has been 
+                            a long-time goal, and I'm incredibly proud to have 
+                            finally made it a reality!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="outer" id="personal">
+                <h2 id="personal-title">Personal</h2>
+                <h3>Art</h3>
+                <div class="full">
+                    <p>In my spare time, I enjoy drawing, especially creating 
+                        imaginative surreal drawings or more detailed sketches
+                        that explore interesting perspectives. These are a few 
+                        of my works.
+                    </p>
+                </div>
+                <div class="personal-tile">
+                    <div class="entry">
+                        <div class="left media">
+                            <img  src="portfolio-media/Yellow Zeppelin.jpg" />
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <img  src="portfolio-media/Bird's Eye View of City.jpg" />
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <img  src="portfolio-media/Mushroom City Pastel.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <h3>Outdoor Activities</h3>
+                <div class="personal-tile">
+                    <div class="entry full">
+                        <p>Nothing beats going to the beach with friends and family!
+                            Actually, I love just about anything that involves being
+                            in or on the water, from kayaking to swimming pools to 
+                            water parks.
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <img src="portfolio-media/San Diego Beach.png"/>
+                        </div>
+                        <div class="right">
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="left media">
+                            <img src="portfolio-media/Sandbar with Dad.png"/>
+                        </div>
+                        <div class="right">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <h3>Other Interests</h3>
+                <div class="personal-tile">
+                    <div class="entry full">
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                -->
+            </div>
+            </div>
+            <div id="navbar" class="shortcuts">
+                <section class="in-site-links">
+                    <a class="clickable shortcut" id="About" href="#welcome-section">
+                        <h5>About</h5>
+                    </a>
+                    <a class="clickable shortcut" id="Projects" href="#projects">
+                        <h5>Projects</h5>
+                    </a>
+                    <a class="clickable shortcut" id="Personal" href="#personal">
+                        <h5>Personal</h5>
+                    </a>
+                </section>
+                <div class="socials">
+                    <a class="clickable social shortcut" id="linkedin" target="blank" href="https://www.linkedin.com/in/camilo-garrido-0898a0197/"><i class="fa fa-linkedin-square" style="font-size:min(5.7vw, 30px);color:#0A66C2;background:linear-gradient(transparent 20%,white 20%,white 80%,transparent 80%);border-radius:min(1.62vw, 8.1px);margin-right:min(2vw,6px)"></i></a>
+                    <a class="clickable social shortcut" id="instagram" target="blank" href="https://www.instagram.com/camilogarrido72/"><i class="fa fa-instagram" style="font-size:min(5vw, 25px); background:radial-gradient(circle at 30% 110%,#ffdb8b 0%,#ee653d 25%,#d42e81 50%,#a237b6 75%,#3e57bc 100%);border-radius:min(1.62vw, 8.1px);padding: min(0.125vw, 0.875px) min(0.5vw, 3.5px);"></i></a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
