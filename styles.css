@@ -252,6 +252,7 @@ img#headshot {
   height: 100%;
   object-fit: cover;
   margin-left: min(3vw, 20px);
+  border-radius: 50%;
 }
 
 div#name-and-headline {
