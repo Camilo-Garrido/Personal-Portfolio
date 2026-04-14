@@ -1,0 +1,406 @@
+<!-- Camilo Garrido Fernandez -->
+<!-- Portfolio -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Camilo Garrido Fernandez</title>
+</head>
+
+<body>
+    <div id="nav-wrapper">
+        <i id="nav-bars" class="fa fa-bars"></i>
+        <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="interests.html">Personal</a></li>
+        </ul>
+    </div>
+
+    <div id="modal-backdrop"></div>
+
+    <main id="main">
+
+        <div class="header-container">
+            <div id="profile-landscape">
+                <!-- Circular Headshot -->
+                <div class="headshot-wrapper">
+                    <img id="headshot-landscape" src="media/headshot.jpg" alt="Camilo Garrido Fernandez" />
+                </div>
+
+                <!-- Text and Links -->
+                <div id="profile-info-landscape">
+                    <h1 id="name-landscape">Camilo Garrido Fernandez</h1>
+                    <h2 id="headline-landscape">Mechanical Engineer  |  Caltech Undergraduate</h2>
+                    
+                    <ul id="contact-bar-landscape">
+                        <li id="location">
+                            <p><i class="fa fa-map-marker"></i> Pasadena, CA</p>
+                        </li>
+                        <li id="email">
+                            <a href="mailto:cgarrido@caltech.edu">
+                                <i class="fa fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        <li id="linkedin">
+                            <a target="_blank" href="https://www.linkedin.com/in/camilo-garrido">
+                                <i class="fa fa-linkedin-square"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li id="github">
+                            <a target="_blank" href="https://github.com/Camilo-Garrido">
+                                <i class="fa fa-github-square"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-feed">
+
+            <!-- ── Terence: The Interactive Angry Birds-Playing Robot ── ME 134 -->
+            <div class="project-card">
+                <p class="project-title">Terence: The Interactive Angry Birds-Playing Robot</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/terence_me134/terence_objective.png" alt="Terence objective diagram"/>
+                        </div>
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Build a robot that autonomously plays a real-life version of Angry Birds — detecting colored balls and 3D-printed pig targets, then using a slingshot to knock them down while gracefully adapting to human interference in real time.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <div class="carousel-container">
+                                <img class="carousel-sizer" src="media/terence_me134/code_architecture_diagram.png">
+                                <div class="carousel-viewport">
+                                    <img class="project-img carousel-item" src="media/terence_me134/full_robot.png">
+                                    <img class="project-img carousel-item" src="media/terence_me134/code_architecture_diagram.png">
+                                    <img class="project-img carousel-item" src="media/terence_me134/full_robot.png">
+                                    <img class="project-img carousel-item" src="media/terence_me134/code_architecture_diagram.png">
+                                    <img class="project-img carousel-item" src="media/terence_me134/full_robot.png">
+                                    <img class="project-img carousel-item" src="media/terence_me134/code_architecture_diagram.png">
+                                </div>
+                                <button class="carousel-control prev" onclick="moveCarousel(this, -1)">&#10094;</button>
+                                <button class="carousel-control next" onclick="moveCarousel(this, 1)">&#10095;</button>
+                                <div class="carousel-dots">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">A 4-DOF HEBI arm with a slingshot mounted on its base motor used ROS with eight nodes spanning computer vision (HSV masking, ArUco markers, Intel RealSense depth), damped Newton–Raphson inverse kinematics, spline trajectory generation, and continuous collision/gripper detection for robust human interaction.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                        <div class="media-card" onclick="window.open('media/terence_me134/terence_final_video.mp4', '_blank')">
+                            <img class="project-img" src="media/terence_me134/terence_launching.png" alt="Terence launching"/>
+                            <div class="media-cta">
+                                <i class="fa fa-play"></i> Watch a Video
+                            </div>
+                        </div>
+                    </div>
+                        <p class="section-label">Results</p>
+                        <p class="section-body">The robot successfully completed full autonomous cycles — picking up balls, loading the slingshot, aiming at targets, and launching — while correctly handling human interventions such as added/removed balls, knocked-down targets, and physical contact with the arm.</p>
+                    </div>
+                
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/terence_me134/ME134_Angry_Birds_Final_Report.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-file-text-o"></i> Full Report
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Fixed-Wing Aircraft Path Planner ── ME 133b -->
+            <div class="project-card">
+                <p class="project-title">Fixed-Wing Aircraft Path Planner</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/aircraft_planner_me133b/plane_model_diagram.png" alt="Plane model diagram"/>
+                        </div>
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Develop a motion planner for a fixed-wing aircraft that generates smooth, flyable paths through obstacle-laden environments while respecting the vehicle's minimum turning radius constraints.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/aircraft_planner_me133b/dubins_path_diagram.png" alt="Dubins path diagram"/>
+                        </div>
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">An RRT planner was implemented using Dubins paths as the local steering primitive, ensuring every generated path segment is kinematically feasible for a fixed-wing aircraft; post-processing then shortened and smoothed the raw RRT output.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <div class="media-card">
+                                <div class="carousel-container">
+                                    <img class="carousel-sizer" src="media/aircraft_planner_me133b/rrt_output_path4_cover_image.png">
+                                    <div class="carousel-viewport">
+                                        <a class="project-img-link" href="media/aircraft_planner_me133b/rrt_postprocessed_path4.html" target="_blank">
+                                            <img class="project-img carousel-item" src="media/aircraft_planner_me133b/rrt_output_path4_post_processed_cover_image.png">
+                                        </a>
+                                        <a class="project-img-link" href="media/aircraft_planner_me133b/rrt_output_path4.html" target="_blank">
+                                            <img class="project-img carousel-item" src="media/aircraft_planner_me133b/rrt_output_path4_cover_image.png">
+                                        </a>
+                                        <a class="project-img-link" href="media/aircraft_planner_me133b/rrt_postprocessed_path4.html" target="_blank">
+                                            <img class="project-img carousel-item" src="media/aircraft_planner_me133b/rrt_output_path4_post_processed_cover_image.png">
+                                        </a>
+                                        <a class="project-img-link" href="media/aircraft_planner_me133b/rrt_output_path4.html" target="_blank">
+                                            <img class="project-img carousel-item" src="media/aircraft_planner_me133b/rrt_output_path4_cover_image.png">
+                                        </a>
+                                        <a class="project-img-link" href="media/aircraft_planner_me133b/rrt_postprocessed_path4.html" target="_blank">
+                                            <img class="project-img carousel-item" src="media/aircraft_planner_me133b/rrt_output_path4_post_processed_cover_image.png">
+                                        </a>
+                                    </div>
+                                    <button class="carousel-control prev" onclick="moveCarousel(this, -1)">&#10094;</button>
+                                    <button class="carousel-control next" onclick="moveCarousel(this, 1)">&#10095;</button>
+                                </div>
+                                <div class="media-cta" onclick="openRRTMap()">
+                                    <i class="fa fa-map"></i> Open Interactive Map
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-label">Results</p>
+                        <p class="section-body">The planner reliably found collision-free, curvature-constrained paths through cluttered environments, with post-processing significantly reducing path length while preserving flyability.</p>
+                    </div>
+
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/aircraft_planner_me133b/ME_133B_Final_Report.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-file-text-o"></i> Full Report
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Engineering Analysis Reports ── ME 50 -->
+            <div class="project-card">
+                <p class="project-title">Engineering Analysis Reports</p>
+                <p class="me50-overview">Finite element analyses of aluminum structures in Ansys — exploring tensile failure, mesh convergence, stress concentration, elastic–plastic deformation, modal vibration, and transient structural dynamics.</p>
+                <div class="project-sections-row">
+                    <div class="section-media" id="reports">
+                        
+                        <!-- Tensile Tests Report Card -->
+                        <div class="media-card" onclick="window.open('media/fea_reports_me50/6061_T6_Aluminum_FEA_Tensile_Tests_Report.pdf', '_blank')">
+                            <img class="project-img" src="media/fea_reports_me50/simulated_tensile_tests_overview.png" alt="Tensile tests overview"/>
+                            <div class="media-cta">
+                                <i class="fa fa-file-text-o"></i> Read Full Report
+                            </div>
+                        </div>
+
+                        <!-- Vibration Simulation Report Card -->
+                        <div class="media-card" onclick="window.open('media/fea_reports_me50/Numerical_Simulations_of_a_Vibrating_H_Beam_and_I_Beam_Report.pdf', '_blank')">
+                            <img class="project-img" src="media/fea_reports_me50/vibration_modes_overview.png" alt="Vibration modes overview"/>
+                            <div class="media-cta">
+                                <i class="fa fa-file-text-o"></i> Read Full Report
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── OrbitNav: CubeSat ADCS Module ── AE 103a -->
+            <div class="project-card">
+                <p class="project-title">OrbitNav: CubeSat Attitude Determination &amp; Control Module</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/orbitnav_ae_103a/cubesat.jpeg.jpg" alt="CubeSat in orbit"/>
+                        </div>
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Design a plug-and-play ADCS module for 3U–6U CubeSats that works with any combination of sensors and actuators while minimizing the parameters end-users need to configure.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/orbitnav_ae_103a/orbitnav_diagram.png" alt="OrbitNav block diagram"/>
+                        </div>
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">A Kalman Filter fuses noisy sensor measurements with a linearized state-space dynamics model for optimal state estimation, while an LQR controller minimizes a quadratic cost balancing pointing accuracy against actuator effort across reaction wheels, thrusters, and magnetorquers simultaneously.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <div class="carousel-container">
+                                <img class="carousel-sizer" src="media/orbitnav_ae_103a/baseline_pid_errors.png">
+                                <div class="carousel-viewport">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/lqr_errors.png">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/baseline_pid_errors.png">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/lqr_errors.png">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/baseline_pid_errors.png">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/lqr_errors.png">
+                                    <img class="project-img carousel-item" src="media/orbitnav_ae_103a/baseline_pid_errors.png">
+                                </div>
+                                <button class="carousel-control prev" onclick="moveCarousel(this, -1)">&#10094;</button>
+                                <button class="carousel-control next" onclick="moveCarousel(this, 1)">&#10095;</button>
+                                <div class="carousel-dots">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="section-label">Results</p>
+                        <p class="section-body">Simulation showed the OrbitNav module achieved an ~90% reduction in RMS attitude error versus a baseline PID controller (1.435° vs. 13.200°), while also drastically reducing magnetorquer wear by penalizing excessive actuation through LQR cost tuning.</p>
+                    </div>
+
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/orbitnav_ae_103a/Ae_103A_PDR.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-file-text-o"></i> Full Report
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Bot Dylan: The Guitar-Playing Robot ── ME 133a -->
+            <div class="project-card">
+                <p class="project-title">Bot Dylan: The Guitar-Playing Robot</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Model a bimanual robotic system using the Shadow Robot Dextrous Hands capable of playing guitar chords — coordinating a fretting hand to press strings on the fretboard and a strumming hand to sweep across the strings simultaneously.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">A 45-DOF kinematic system was controlled through prioritized multi-task inverse kinematics — a primary task for fingertip positions, a secondary null-space task for thumb placement and finger clearance, and a tertiary task to maintain a natural hand pose — with weighted inverses to handle singularities.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <p class="section-label">Results</p>
+                        <p class="section-body">The system successfully played chord progressions (C, E, G) with coordinated fretting and strumming motions, achieving precise fingertip placement on target strings while maintaining natural-looking hand poses throughout.</p>
+                    </div>
+
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/bot_dylan_me133a/ME133a_Bot_Dylan_Report.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-file-text-o"></i> Full Report
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Sumo Hockey Robot ── ME 72a -->
+            <div class="project-card">
+                <p class="project-title">Sumo Hockey Robot</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Develop a high-performance mobile robot for a "Sumo Hockey" competition, prioritizing power, robustness, and agile maneuverability to win pushing contests while maintaining precise puck control.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">Designed a drivetrain using 12V AndyMark Redline motors and a 10:1 gear ratio. Fabricated an aluminum frame via waterjet cutting and integrated custom 3D-printed herringbone gears and magnetic downforce for optimized traction.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <video class="project-vid" controls>
+                                <source src="media/sumo_hockey_robot _me72a/robot_scoring.mp4" type="video/mp4">
+                                Transmission Video (not supported by your browser)
+                            </video>
+                        </div>
+                        <p class="section-label">Results</p>
+                        <p class="section-body">Achieved a fully functional chassis that successfully demonstrated high speed and maneuverability during mobility trials. Validated the durability of 3D-printed Nylon-CF gears against extreme impact and stall torque loads.</p>
+                    </div>
+
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/sumo_hockey_robot _me72a/ME72a_Engineering_Notebook.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-book"></i> Engineering Notebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Two-Speed Transmission ── ME 14 -->
+            <div class="project-card">
+                <p class="project-title">Two-Speed Transmission</p>
+                <div class="project-sections-row">
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/transmission_me14/transmission_cad.png" alt="Transmission CAD"/>
+                        </div>
+                        <p class="section-label">Objectives</p>
+                        <p class="section-body">Design and manufacture a robust two-speed transmission system capable of shifting under load while meeting strict weight and volume constraints for small-scale vehicle applications.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <video class="project-vid" controls>
+                                <source src="media/transmission_me14/transmission_testing.mp4" type="video/mp4">
+                                Transmission Video (not supported by your browser)
+                            </video>
+                        </div>
+                        <p class="section-label">Methods</p>
+                        <p class="section-body">Utilized manual machining (lathe and mill) to create custom shafts and gears. Implemented a dog-clutch engagement mechanism for rapid shifting and performed failure analysis to ensure gear teeth could withstand peak torque.</p>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/transmission_me14/team2trial1.png" alt="Transmission trial"/>
+                        </div>
+                        <p class="section-label">Results</p>
+                        <p class="section-body">The transmission successfully passed all physical trials, demonstrating smooth shifting between high-torque and high-speed modes without mechanical failure under maximum rated load.</p>
+                    </div>
+
+                </div>
+                <div class="project-footer">
+                    <a class="report-btn" href="media/transmission_me14/transmission_engineering_notebook.pdf" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-book"></i> Engineering Notebook
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <h4>&copy; <span id="year"></span> Camilo Garrido Fernandez. All Rights Reserved.</h4>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

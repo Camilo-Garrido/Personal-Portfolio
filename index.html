@@ -1,0 +1,92 @@
+<!-- Camilo Garrido Fernandez -->
+<!-- Welcome Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Camilo Garrido Fernandez</title>
+</head>
+
+<body>
+    <div id = "nav-wrapper">
+                <i id="nav-bars" class="fa fa-bars"></i>
+        <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="interests.html">Personal</a></li>
+        </ul>
+    </div>
+    
+    <div id="modal-backdrop"></div>
+    <main id="main">
+        <div class=outer>
+            <div id="profile-wrapper">
+                <div id="profile">
+
+                    <div id="profile-collapsed">
+                        <img id="headshot-collapsed" src="media/headshot.jpg" />
+                        <div class="profile-text-mobile">
+                            <h2 id="name-mobile">Camilo Garrido</h2>
+                            <h2 id="name-mobile">Fernandez</h2>
+                            <h3 id="headline-mobile">Mechanical Engineer</h3>
+                        </div>
+                        <button id="connect-button">Connect</button>
+                    </div>
+
+                    <img id="headshot" src="media/headshot.jpg" />
+
+                    <div id="profile-overview">
+                        <h2 id="name">Camilo Garrido Fernandez</h2>
+                        <h3 id="headline">Mechanical Engineer  |  Caltech Undergrad</h3>
+
+                        <ul id="contact-box">
+                            <li id="location">
+                                <p><i class="fa fa-map-marker"></i> Pasadena, CA</p>
+                            </li>
+                            <li id="email">
+                                <a href="mailto:cgarrido@caltech.edu">
+                                    <i class="fa fa-envelope"></i> Email
+                                </a>
+                            </li>
+                            <li id="linkedin">
+                                <a target="_blank" href="https://www.linkedin.com/in/camilo-garrido">
+                                    <i class="fa fa-linkedin-square"></i> LinkedIn
+                                </a>
+                            </li>
+                            <li id="github">
+                                <a target="_blank" href="https://github.com/Camilo-Garrido">
+                                    <i class="fa fa-github-square"></i> GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="text-box">
+                    <h1>Welcome!</h1>
+                    <p>I’m Camilo Garrido, a mechanical engineering student at Caltech focused on robotics, product design, and systems engineering. I’m driven by a deep curiosity for how things work—and how thoughtful engineering can make them work better.</p>
+                    <p>I’ve had the privilege of applying this passion across a wide range of projects and industries. Most recently, I served as a Product Design intern at Apple, contributing to the development of next-generation iPhone hardware through mechanical system integration, CAD refinement, prototyping, and failure analysis. I’ve also worked in thermal systems at Trane Technologies, taught engineering fundamentals as a Caltech TA, and built robots and mechanical systems ranging from transmissions to tethered crater-descending vehicles.</p>
+                    <p>Whether I’m designing hardware, modeling dynamic systems, machining parts, or integrating electronics and software, I love the challenge of bringing complex ideas into reality. This site is a curated space to share the engineering work, robotics projects, and long-term builds that have shaped my journey so far.</p>
+                    <p>Thanks for visiting—and I hope you enjoy exploring my work.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h4>&copy; <span id="year"></span> Camilo Garrido Fernandez. All Rights Reserved.</h4>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
