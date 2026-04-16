@@ -77,7 +77,7 @@
                             <img class="project-img" src="media/terence_me134/terence_objective.png" alt="Terence objective diagram"/>
                         </div>
                         <p class="section-label">Objectives</p>
-                        <p class="section-body">Build a robot that autonomously plays a real-life version of Angry Birds — detecting colored balls and 3D-printed pig targets, then using a slingshot to knock them down while gracefully adapting to human interference in real time.</p>
+                        <p class="section-body">Build a robot that autonomously plays a real-life version of Angry Birds — detecting colored balls and 3D-printed pig targets, then using a slingshot to knock them down while dynamically adapting to human interference in real time.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <p class="section-label">Methods</p>
-                        <p class="section-body">A 4-DOF HEBI arm with a slingshot mounted on its base motor used ROS with eight nodes spanning computer vision (HSV masking, ArUco markers, Intel RealSense depth), damped Newton–Raphson inverse kinematics, spline trajectory generation, and continuous collision/gripper detection for robust human interaction.</p>
+                        <p class="section-body">A 4-DOF HEBI arm with a slingshot mounted on its base motor using a network of ROS nodes to manage computer vision (HSV masking for object detection using a 2D and a 3D/depth camera), damped Newton–Raphson inverse kinematics, spline trajectory generation, continuous collision and gripper detection, and decision-making for robust human interaction.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -139,7 +139,7 @@
                             <img class="project-img" src="media/aircraft_planner_me133b/plane_model_diagram.png" alt="Plane model diagram"/>
                         </div>
                         <p class="section-label">Objectives</p>
-                        <p class="section-body">Develop a motion planner for a fixed-wing aircraft that generates smooth, flyable paths through obstacle-laden environments while respecting the vehicle's minimum turning radius constraints.</p>
+                        <p class="section-body">Develop a motion planner for a fixed-wing aircraft that generates smooth, flyable paths through pre-mapped obstacle-dense urban environments while respecting the vehicle's dynamic constraints.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -149,7 +149,7 @@
                             <img class="project-img" src="media/aircraft_planner_me133b/dubins_path_diagram.png" alt="Dubins path diagram"/>
                         </div>
                         <p class="section-label">Methods</p>
-                        <p class="section-body">An RRT planner was implemented using Dubins paths as the local steering primitive, ensuring every generated path segment is kinematically feasible for a fixed-wing aircraft; post-processing then shortened and smoothed the raw RRT output.</p>
+                        <p class="section-body">Implemented an RRT planner using Dubins paths as the local steering primitive and enforcing max climb/descent angles enforced along the paths. This ensures every generated path segment is kinematically feasible for a fixed-wing aircraft. Post-processing then iterates over the raw RRT output to remove unecessary intermediate nodes.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -233,7 +233,7 @@
                             <img class="project-img" src="media/orbitnav_ae_103a/cubesat.jpeg.jpg" alt="CubeSat in orbit"/>
                         </div>
                         <p class="section-label">Objectives</p>
-                        <p class="section-body">Design a plug-and-play ADCS module for 3U–6U CubeSats that works with any combination of sensors and actuators while minimizing the parameters end-users need to configure.</p>
+                        <p class="section-body">Design a plug-and-play ADCS module for 3U–6U CubeSats that works with any configuration of actuators and sensors while minimizing the parameters end-users need to configure.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -243,7 +243,7 @@
                             <img class="project-img" src="media/orbitnav_ae_103a/orbitnav_diagram.png" alt="OrbitNav block diagram"/>
                         </div>
                         <p class="section-label">Methods</p>
-                        <p class="section-body">A Kalman Filter fuses noisy sensor measurements with a linearized state-space dynamics model for optimal state estimation, while an LQR controller minimizes a quadratic cost balancing pointing accuracy against actuator effort across reaction wheels, thrusters, and magnetorquers simultaneously.</p>
+                        <p class="section-body">A Kalman Filter fuses noisy sensor measurements with a linearized state-space dynamics model for optimal state estimation, while an LQR controller minimizes a quadratic cost balancing pointing accuracy against actuator effort across reaction wheels, thrusters, and magnetorquers based on a minimal set of user-input actuator weights/costs.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -269,7 +269,7 @@
                             </div>
                         </div>
                         <p class="section-label">Results</p>
-                        <p class="section-body">Simulation showed the OrbitNav module achieved an ~90% reduction in RMS attitude error versus a baseline PID controller (1.435° vs. 13.200°), while also drastically reducing magnetorquer wear by penalizing excessive actuation through LQR cost tuning.</p>
+                        <p class="section-body">Simulation showed the OrbitNav module achieved an ~90% reduction in RMS attitude error versus a baseline PID controller (1.435° vs. 13.200°), while also drastically reducing actuator saturation through LQR cost tuning.</p>
                     </div>
 
                 </div>
@@ -286,6 +286,9 @@
                 <div class="project-sections-row">
 
                     <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/bot_dylan_me133a/bot_dylan_hands_and_guitar.png" alt="Bot Dylan Robot Hands and Guitar"/>
+                        </div>
                         <p class="section-label">Objectives</p>
                         <p class="section-body">Model a bimanual robotic system using the Shadow Robot Dextrous Hands capable of playing guitar chords — coordinating a fretting hand to press strings on the fretboard and a strumming hand to sweep across the strings simultaneously.</p>
                     </div>
@@ -293,6 +296,9 @@
                     <div class="section-divider"></div>
 
                     <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/bot_dylan_me133a/bot_dylan_task_hierarchy.png" alt="Bot Dylan Task Hierarchy"/>
+                        </div>
                         <p class="section-label">Methods</p>
                         <p class="section-body">A 45-DOF kinematic system was controlled through prioritized multi-task inverse kinematics — a primary task for fingertip positions, a secondary null-space task for thumb placement and finger clearance, and a tertiary task to maintain a natural hand pose — with weighted inverses to handle singularities.</p>
                     </div>
@@ -300,8 +306,14 @@
                     <div class="section-divider"></div>
 
                     <div class="project-section">
+                        <div class="section-media">
+                            <video class="project-vid" controls>
+                                <source src="media/bot_dylan_me133a/bot_dylan_video.mp4" type="video/mp4">
+                                Bot Dylan Video (not supported by your browser)
+                            </video>
+                        </div>
                         <p class="section-label">Results</p>
-                        <p class="section-body">The system successfully played chord progressions (C, E, G) with coordinated fretting and strumming motions, achieving precise fingertip placement on target strings while maintaining natural-looking hand poses throughout.</p>
+                        <p class="section-body">The system successfully played chord progressions with coordinated fretting and strumming motions, achieving precise fingertip placement on target strings while maintaining natural-looking hand poses throughout.</p>
                     </div>
 
                 </div>
@@ -318,15 +330,21 @@
                 <div class="project-sections-row">
 
                     <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/sumo_hockey_robot_me72a/me72a_chassis.png" alt="Sumo Hockey Robot Drivetrain"/>
+                        </div>
                         <p class="section-label">Objectives</p>
-                        <p class="section-body">Develop a high-performance mobile robot for a "Sumo Hockey" competition, prioritizing power, robustness, and agile maneuverability to win pushing contests while maintaining precise puck control.</p>
+                        <p class="section-body">Develop a high-performance mobile robot for a "Sumo Hockey" competition, prioritizing power, robustness, and agile maneuverability to win pushing contests and maintain puck control.</p>
                     </div>
 
                     <div class="section-divider"></div>
 
                     <div class="project-section">
+                        <div class="section-media">
+                            <img class="project-img" src="media/sumo_hockey_robot_me72a/me72a_waterjet.png" alt="Waterjetting the Chassis Frame"/>
+                        </div>
                         <p class="section-label">Methods</p>
-                        <p class="section-body">Designed a drivetrain using 12V AndyMark Redline motors and a 10:1 gear ratio. Fabricated an aluminum frame via waterjet cutting and integrated custom 3D-printed herringbone gears and magnetic downforce for optimized traction.</p>
+                        <p class="section-body">Designed a cost-effective agile tank-drive using 2 motors to drive central high-traction wheels and idle outer omniwheels, with magnets to increase traction. Developed a two-stage, waterjet + milling, manufacturing process to quickly and reproducibly fabricate an aluminum frame.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -334,12 +352,12 @@
                     <div class="project-section">
                         <div class="section-media">
                             <video class="project-vid" controls>
-                                <source src="media/sumo_hockey_robot _me72a/robot_scoring.mp4" type="video/mp4">
+                                <source src="media/sumo_hockey_robot_me72a/robot_scoring.mp4" type="video/mp4">
                                 Transmission Video (not supported by your browser)
                             </video>
                         </div>
                         <p class="section-label">Results</p>
-                        <p class="section-body">Achieved a fully functional chassis that successfully demonstrated high speed and maneuverability during mobility trials. Validated the durability of 3D-printed Nylon-CF gears against extreme impact and stall torque loads.</p>
+                        <p class="section-body">Achieved a fully functional chassis that successfully demonstrated high speed and maneuverability during mobility trials.</p>
                     </div>
 
                 </div>
@@ -360,7 +378,7 @@
                             <img class="project-img" src="media/transmission_me14/transmission_cad.png" alt="Transmission CAD"/>
                         </div>
                         <p class="section-label">Objectives</p>
-                        <p class="section-body">Design and manufacture a robust two-speed transmission system capable of shifting under load while meeting strict weight and volume constraints for small-scale vehicle applications.</p>
+                        <p class="section-body">Design and manufacture a robust transmission system for a class competition where the score was determined by dividing the transmission highest (steady-state) RPM by the time it took to reach 250 RPM.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -373,7 +391,7 @@
                             </video>
                         </div>
                         <p class="section-label">Methods</p>
-                        <p class="section-body">Utilized manual machining (lathe and mill) to create custom shafts and gears. Implemented a dog-clutch engagement mechanism for rapid shifting and performed failure analysis to ensure gear teeth could withstand peak torque.</p>
+                        <p class="section-body">Implemented a two-stage transmission mechanism using one-way bearings and an H-bridge to switch the polarity of the motor mid-operation to optimize both initial torque and steady-state velocity. Utilized manual machining (lathe and mill) to customize small quantities of off-the-shelf shafts and gears.</p>
                     </div>
 
                     <div class="section-divider"></div>
@@ -383,7 +401,7 @@
                             <img class="project-img" src="media/transmission_me14/team2trial1.png" alt="Transmission trial"/>
                         </div>
                         <p class="section-label">Results</p>
-                        <p class="section-body">The transmission successfully passed all physical trials, demonstrating smooth shifting between high-torque and high-speed modes without mechanical failure under maximum rated load.</p>
+                        <p class="section-body">The transmission successfully shifting between high-torque and high-speed modes during the class competition, culminating in a first-place finish.</p>
                     </div>
 
                 </div>
