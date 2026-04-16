@@ -78,6 +78,36 @@ moveCarousel = function(button, direction) {
     originalMoveCarousel(button, direction);
 };
 
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+const resumeContainer = document.getElementById('resume-container');
+
+if (fullscreenBtn && resumeContainer) {
+    fullscreenBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            // Attempt to enter fullscreen
+            if (resumeContainer.requestFullscreen) {
+                resumeContainer.requestFullscreen();
+            } else if (resumeContainer.webkitRequestFullscreen) { /* Safari */
+                resumeContainer.webkitRequestFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fa fa-compress"></i> Exit Full Screen';
+        } else {
+            // Exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            fullscreenBtn.innerHTML = '<i class="fa fa-expand"></i> Full Screen';
+        }
+    });
+}
+
+// Listen for the 'Esc' key or system-level exit to reset the button text
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        fullscreenBtn.innerHTML = '<i class="fa fa-expand"></i> Full Screen';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("year").textContent = new Date().getFullYear();
 

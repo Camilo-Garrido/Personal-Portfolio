@@ -40,22 +40,34 @@
     --img-height: 180px;
 }
 
-html, body {
-    height: 100%;
+html {
+    min-height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
+    /* min-height: 100vh; */
+    margin: 0;
+    padding: 0;
     font-family: Lato, Arial;
     display: flex;
     flex-direction: column;
     background-color: var(--bg);
+    overflow-x: hidden;
+}
+
+/* ─────────────────────────── COLLAPSED PROFILE CARD (index mobile) ────── */
+
+/* Shown in mobile via @media; hidden on desktop below */
+#profile-collapsed-landscape {
+    display: none;
 }
 
 main {
     flex: 1;
     padding-top: 96px;
+    overflow: hidden;
 }
 
 ul {
@@ -296,9 +308,18 @@ ul {
     gap: 2.5em;
     width: 100%;
     max-width: 96em;
-    margin: 2.5em auto 4em auto;
+    margin: 2.5em auto 0 auto;
     padding: 0 3em;
     box-sizing: border-box;
+    overflow: clip;
+}
+
+/* ─────────────────────────────── MAIN ─────────────────────────────── */
+
+main {
+    flex: 1;
+    padding-top: 96px;
+    padding-bottom: 4em;
 }
 
 /* ─────────────────────────── PROJECT CARD ─────────────────────────── */
@@ -316,8 +337,8 @@ ul {
 }
 
 .project-title {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 800;
     color: var(--text-primary);
     margin: 0 0 0.1em 0;
     padding: 0 0 0.55em 0;
@@ -452,7 +473,7 @@ ul {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-snap-type: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -527,17 +548,22 @@ ul {
 }
 
 .carousel-dots {
+    display: flex;
     position: absolute;
     bottom: 6px;
     left: 0;
     right: 0;
     text-align: center;
-    padding: 3px 0;
+    height: 16px;
+    width: fit-content;
+    margin: auto;
+    padding: 0;
+    border-radius: 8px;
     z-index: 3;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .carousel-container:hover .carousel-dots {
@@ -545,25 +571,25 @@ ul {
 }
 
 .dot {
-    height: 7px;
-    width: 7px;
-    margin: 0 4px;
-    background-color: rgba(255, 255, 255, 0.60);
+    height: 8px;
+    width: 8px;
+    margin: auto 4px;
+    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.15s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.30);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .dot.active {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #555;
 }
 
 /* ─────────────────────────── SECTION LABELS & TEXT ─────────────────────────── */
 
 .section-label {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     color: var(--text-primary);
     margin: 0 0 0.35em 0;
     padding: 0;
@@ -650,6 +676,8 @@ ul {
     gap: 5em;
     width: 100%;
     max-width: 75em;
+    padding: 0 3em;
+    box-sizing: border-box;
 }
 
 #profile-wrapper {
@@ -745,7 +773,7 @@ h3 { font-size: 16px; font-weight: 400; }
 h4 {
     margin: 1em;
     padding: 0.25em 0;
-    color: white;
+    color: var(--text-secondary);
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -816,6 +844,7 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
         gap: 2.5em;
         width: 100%;
         max-width: 75em;
+        padding: 0 0.8em;
     }
 
     #profile-wrapper {
@@ -826,7 +855,6 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
     }
 
     #profile {
-        margin-left: 156.41px;
         display: flex;
         position: static;
         height: fit-content;
@@ -834,24 +862,26 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: right;
+        justify-content: center;
         gap: 0.5em;
-        transition: margin-left 0.3s ease-in-out;
+        margin-left: 0;
     }
 
     #headshot, #name, #headline { display: none; }
 
+    /* New landscape-style collapsed card */
     #profile-collapsed {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        width: fit-content;
-        padding: 0.5em 1em;
         gap: 1em;
+        padding: 0.85em 1.5em;
         background-color: var(--surface);
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-md);
+        width: fit-content;
+        max-width: 90vw;
     }
 
     #headshot-collapsed {
@@ -860,33 +890,50 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
         height: 4em;
         border-radius: 50%;
         flex-shrink: 0;
+        object-fit: cover;
     }
 
     .profile-text-mobile {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.1em;
     }
 
-    .profile-text-mobile * { text-align: left; text-wrap: nowrap; }
-    #name-mobile     { font-size: 20px; font-weight: 600; overflow: hidden; }
-    #headline-mobile { font-size: 16px; }
+    .profile-text-mobile * { text-align: left; }
+    #name-mobile     { font-size: 17px; font-weight: 700; color: var(--text-primary); }
+    #headline-mobile { font-size: 13px; font-weight: 400; color: var(--text-secondary); }
 
-    #connect-button {
-        display: block;
-        background-color: var(--text-secondary);
-        color: white;
-        border: none;
-        border-radius: var(--radius-sm);
-        padding: 1em;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        flex-shrink: 0;
+    #contact-bar-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 
-    #connect-button:hover { background-color: var(--text-primary); }
+    #profile-wrapper #contact-bar-mobile li p,
+    #contact-bar-mobile li a {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.2s;
+    }
+
+    #contact-bar-mobile li p {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+    }
+
+    #contact-bar-mobile a:hover { color: var(--text-primary); }
+
+    /* Hide old connect/contact elements completely on index mobile */
+    #connect-button { display: none !important; }
+    #contact-box    { display: none !important; }
 
     .content {
         margin: 0 auto;
@@ -897,30 +944,6 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
 
     .text-box, .pdf-container { box-shadow: var(--shadow-sm); }
 
-    #contact-box {
-        margin-top: 0;
-        width: fit-content;
-        height: fit-content;
-        max-width: 90vw;
-        flex-shrink: 0;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        z-index: 11;
-    }
-
-    #contact-box li { padding: 0; font-size: 14px; text-wrap: nowrap; }
-
-    body.is-connected #contact-box {
-        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-
-    body.is-connected #profile           { margin-left: 0; }
-    body.is-connected #profile-collapsed  { margin: 0; }
-    body.is-connected #connect-button    { background-color: var(--text-primary); }
 
     .portfolio-feed { padding: 0 0.8em; gap: 1.6em; }
     .project-card   { padding: 1.4em 1.2em 1.2em 1.2em; }
@@ -946,15 +969,86 @@ p:not(#location p):not(.project-title):not(.section-label):not(.section-body):no
     :root { --img-height: 125px; }
 }
 
-/* ─────────────────────────── FOOTER ─────────────────────────── */
+/* ─────────────────────────── RESUME ─────────────────────────── */
 
-footer {
-    margin: 0;
-    padding: 0;
-    height: 5em;
-    border-top: 0.1em solid var(--border-strong);
-    background-color: var(--text-secondary);
+#resume-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-fs-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.2s ease;
+}
+
+#resume-container:hover .resume-fs-overlay {
+    opacity: 1;
+}
+
+.resume-fs-overlay:hover {
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+}
+
+#resume-container:fullscreen .resume-fs-overlay {
+    opacity: 0.75;
+}
+#resume-container:fullscreen:hover .resume-fs-overlay {
+    opacity: 1;
+}
+
+#resume-container:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#resume-container:fullscreen iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#resume-container:-webkit-full-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--surface);
+}
+
+/* ─────────────────────────── FOOTER ─────────────────────────── */
+
+/* hr {
+    width: 100vw;
+    border-top: 1px solid var(--text-secondary);
+} */
+
+footer {
+    flex-shrink: 0;
+    height: 5em;
+    /* background-color: var(--text-secondary); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; 
 }
